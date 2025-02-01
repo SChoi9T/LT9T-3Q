@@ -62,16 +62,45 @@
 
 		.navbar-brand span {
 			color: #FFFFFF;
+			font-family: "Roboto Mono", serif;
 		}
 
 		.nav-link {
-			color: #FFFFFF;
-			margin: 5px;
+    		color: #BCC7CA;
+    		position: relative;
+    		margin: 5px;
+    		transition: color 0.3s ease;
 		}
 
 		.nav-link:hover {
-			transition: background-color 0.3s ease;
-			background-color: #BCC7CA;
+    		color: #FFFFFF;
+		}
+
+		.nav-link::after {
+    		content: "";
+    		position: absolute;
+    		bottom: -5px;
+    		left: 50%;
+    		width: 0;
+    		height: 3px;
+    		background-color: #BCC7CA;
+    		transform: translateX(-50%);
+    		transition: width 0.3s ease;
+		}
+
+		.nav-link:hover::after {
+    		width: 100%;
+		}
+
+		.nav-link.active {
+    		color: #000000;
+    		pointer-events: none;
+    		cursor: default;
+		}
+
+		.nav-link.active::after {
+    		width: 100%;
+    		background-color: #000000;
 		}
 
 		.header {
@@ -103,6 +132,7 @@
 		.footer {
 			text-align: center;
 			background-color: #96B3AE;
+			font-family: "Roboto Mono", serif;
 			color: #D2E0D3;
 			bottom: 0;
 			padding: 50px;
