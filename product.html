@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project: All - Kit Contents</title>
+    <title>Project: All - Hygiene Kit</title>
 
     <link rel="icon" type="image/x-icon" href="icon.png">
 
@@ -23,12 +23,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <!-- STYLE -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-md navbar-light bg-secondary sticky-top">
         <div class="container-fluid">
             <!-- LOGO -->
@@ -49,16 +51,16 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="product.html">Contents <i class='fas fa-house-user'></i></a>
+                        <a class="nav-link active" href="product.html">Products <i class='  fas fa-clipboard-list'></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About </a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
+                        <a class="nav-link" href="Contributions.html">Contributions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link" href="Register.html">Register</a>
                     </li>
                 </ul>
 
@@ -71,86 +73,90 @@
         </div>
     </nav>
 
-    <main>
-<div class="container text-center mt-5" style="background-color: #F0DDD6; padding: 20px;">
-    <h1>Contents for the hygiene kit</h1>
-</div>
+    <!-- HEADER -->
+    <div class="header container text-center mt-5">
+        <h1>The A.L.L. Hygiene Kit!</h1>
+    </div>
 
-        <!-- Products Section -->
-        <div class="container mt-4" style="background-color: #D2DDD3; padding: 20px; border-radius: 10px;">
-
-
-            <div class="row">   
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="alcohol" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Alcohol</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="snacks.html" class="btn btn-info"><font color="black">Our Supplier</font></a>
-                        </div>
+    <!-- PRODUCTS SECTION -->
+    <div class="main container mt-5 mb-5">
+        <div class="row">   
+            <input class="form-control me-2" type="text" name="q" placeholder="Search for a hygiene kit product..." id="SearchProduct" required>
+            <button class="btn btn-light" onclick="ShowingResults(document.getElementById('SearchProduct').value)" id="ProductButton"><i class="fas fa-search"></i></button>
+            <div id="FoundResults"></div>
+            <br><br>
+            <hr style="height:1px;">
+            <div class="col-md-4 col-sm-6 mb-4" id="Alcohol">
+                <div class="card">
+                    <img src="https://image.made-in-china.com/202f0j00zalfhEjJYMuv/30ml-50ml-100ml-Spray-Plastic-Bottle-Hand-Sanitizer-Plastic-Bottle-for-Alcohol.webp" alt="Alcohol" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Alcohol Spray Bottle</h5>
+                        <p class="card-text">A convenient and portable alcohol spray bottle for sanitizing hands and surfaces, ensuring hygiene on the go.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="napkin" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Napkin</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="dishes.html" class="btn btn-info"><font color="black">Our Supplier</font></a>
-                        </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4" id="Napkin">
+                <div class="card">
+                    <img src="https://media.nature.com/lw767/magazine-assets/d41586-024-02236-5/d41586-024-02236-5_27319844.jpg" alt="Napkin" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sanitary Napkin</h5>
+                        <p class="card-text">Designed for comfort and protection, these high-absorbency sanitary napkins provide reliable menstrual care.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="tissue" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Tissue</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="desserts.html" class="btn btn-info"> <font color="black"> Our Supplier </font></a>
-                        </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4" id="Tissue">
+                <div class="card">
+                    <img src="https://www.bumboo.eco/cdn/shop/articles/pexels-vlada-karpovich-3958203.png" alt="Tissue" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tissue</h5>
+                        <p class="card-text">Soft and durable tissues for everyday use, perfect for personal hygiene, cleaning, or wiping spills.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="face mask" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Face mask</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="beverages.html" class="btn btn-info"><font color="black"> Our Supplier</font></a>
-                        </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4" id="Face_Mask">
+                <div class="card">
+                    <img src="https://blog.bccresearch.com/hubfs/Blog_Images/Face%20Mask.jpg" alt="Face Mask" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Facemasks</h5>
+                        <p class="card-text">Protective face masks designed to filter airborne particles, offering safety and hygiene in various environments.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="shampoo and soap" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Shampoo and Soap</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="rice-dishes.html" class="btn btn-info"><font color="black">Our Supplier</font></a>
-                        </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4" id="Shampoo_and_Soup">
+                <div class="card">
+                    <img src="https://cdn.shopify.com/s/files/1/0653/5007/4598/articles/shampoo_vs_soap_1.webp?v=1670214524" alt="Shampoo & Soup" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Shampoo & Soap</h5>
+                        <p class="card-text">A cleansing set that nourishes the hair and skin while keeping you fresh and free from dirt and bacteria.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card">
-                        <img src="" alt="toothbrush and toothpaste" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><font color="black">Toothpaste and Toothbrush</font></h5>
-                            <p class="card-text"><font color="black">Info here</font></p>
-                            <a href="toothbrush and toothpaste" class="btn btn-info"><font color="black">Our Supplier</font></a>
-                        </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4" id="Toothpaste_and_Toothbrush">
+                <div class="card">
+                    <img src="https://fromk.co.nz/wp-content/uploads/2022/12/No-Brand_Toothbrush-and-Toothpaste-Set2-optimized.jpeg" alt="Toothbrush & Toothpaste" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toothpaste & Toothbrush</h5>
+                        <p class="card-text">A daily essential set that promotes oral health by keeping teeth clean, fresh, and free from cavities.</p>
+                        <a href="#" class="btn btn-dark">Our Supplier</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3 mt-5">
-        <p class="mb-0">&copy; @ 2025 Project: A.L.L. | All Rights Reserved</p>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <h4>&#169; 2025 Project: A.L.L. | All Rights Reserved</h4>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MAIN JS -->
+     <script src="main.js"></script>
 </body>
 </html>
